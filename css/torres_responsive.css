@@ -7,6 +7,10 @@
     }
     .pantalla .contVideo .video.responsive{
         display: block!important;
+    }
+    .btnMenu{
+        display: flex!important;
+        color: #fff;
     }    
 }
 
@@ -16,5 +20,5 @@
     }
     .pantalla .contVideo .video.responsive{
         display: none!important;
-    }
+    }    
 }

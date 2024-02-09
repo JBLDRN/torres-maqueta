@@ -1,6 +1,9 @@
 @import url(reset.css);
 @import url(torres_responsive.css);
 @import url(botones.css);
+:root {
+    --navbar-height: 111px;
+}
 html{
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.05em;
@@ -11,8 +14,8 @@ html{
     width: 100%;
     position: absolute;
     z-index: 2;
-    background: rgba(0, 0, 0, 0.2);
-    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 5px 0;
 }
 .contNavbar .contLogotipo{
     display: grid;
@@ -30,6 +33,12 @@ html{
     justify-content: center;
     align-items: center;
     padding-right: 20px;
+}
+.contNavbar .contLogotipo .logotipo #logo{
+    display: block;
+}
+.contNavbar .contLogotipo .logotipo #logoMenu{
+    display: none;
 }
 .contNavbar ul.menu{
     width: 100%;
@@ -67,7 +76,59 @@ html{
 .contNavbar ul.menu li button:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
-  }
+}
+
+.contSubmenu{
+    display: grid;
+    grid-template-columns: 30vw 70vw;
+    grid-gap: 10px;
+    grid-auto-rows: minmax(60px, auto);
+}
+.contSubmenu .listSection{
+    padding: 50px 50px 0 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px;
+    grid-auto-rows: minmax(60px, auto);    
+}
+.contSubmenu .listSection button{
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+.contSubmenu .listSection button.btn-link{
+    margin-left: 1em;
+    font-size: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.contSubmenu .listSection button.btn-link.titSection{
+    font-size: 2em;
+    font-weight: 600;
+    border-bottom: 1px solid #000;
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+.contImagenMenu{
+    height: calc(100% - var(--navbar-height));
+    min-width: 30vw;
+    position: absolute;    
+}
+.contImagenMenu .titulo{
+    position: relative;
+    top: 1em;
+    font-size: 5em;
+    font-weight: 600;
+    z-index: 3;
+    text-align: center;
+}
+.contImagenMenu img{
+    bottom: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;    
+}
 
 /* VIDEO PANTALLA PRINCIPAL*/
 .pantalla{

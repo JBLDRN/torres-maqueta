@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/torres.css">
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/torres.js" type="text/javascript"></script>
     <title>Torres</title>
 </head>
 <body>
 <header>
     <div class="contNavbar">
         <div class="contLogotipo">
-            <div></div>
+            <div>
+                <div class="btnMenu" onclick="openNav()">&#9776;</div>
+            </div>
             <div class="logotipo">
-                <img src="img/logotipo/logo-header.png" alt="TORRES">
+                <img src="img/logotipo/logo-header.png" alt="TORRES" id="logo">
+                <img src="img/logotipo/logo-header3.png" alt="TORRES" id="logoMenu">
             </div>
             <div class="acciones">
                 Search
@@ -20,27 +25,66 @@
         </div>
         <ul class="menu">
             <li>
-                <button type="button" class="btn-link animate">Balones</button>
+                <button type="button" class="btn-link" onclick="openNav('balones')">Balones</button>
             </li>
             <li>
-                <button type="button" class="btn-link">Fitness</button>
+                <button type="button" class="btn-link" onclick="openNav('fitness')">Fitness</button>
             </li>
             <li>
-                <button type="button" class="btn-link">Tenis de mesa</button>
+                <button type="button" class="btn-link" onclick="openNav('tenisMesa')">Tenis de mesa</button>
             </li>
             <li>
-                <button type="button" class="btn-link">Bádminton</button>
+                <button type="button" class="btn-link" onclick="openNav('badminton')">Bádminton</button>
             </li>
             <li>
-                <button type="button" class="btn-link">Accesorios</button>
+                <button type="button" class="btn-link" onclick="openNav('accesorios')">Accesorios</button>
             </li>
             <li>
-                <button type="button" class="btn-link">Equipaciones</button>
+                <button type="button" class="btn-link" onclick="openNav('equipaciones')">Equipaciones</button>
             </li>
             <li>
-                <button type="button" class="btn-link">Natación</button>
+                <button type="button" class="btn-link" onclick="openNav('natacion')">Natación</button>
             </li>
         </ul>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <button onclick="closeNav()" class="btn-link btnCloseMenu">X</button>
+        <div class="contSubmenu" id="contBalones">
+            <div>
+                <div class="contImagenMenu">
+                    <div class="titulo">Balones</div>
+                    <img src="img/imagenes/menu/balones.png" alt="Balones">
+                </div>
+            </div>
+            <div class="listSection">
+                <div>
+                    <button class="btn-link titSection">Futbol</button>
+                    <button class="btn-link">Línea Básica</button>
+                    <button class="btn-link">Línea minorista</button>
+                    <button class="btn-link">Línea escolar</button>
+                    <button class="btn-link">Línea de la calle</button>
+                    <button class="btn-link">Línea juvenil</button>
+                    <button class="btn-link">Línea de innovación</button>
+                </div>
+                <div>
+                    <button class="btn-link titSection">Baloncesto</button>
+                    <button class="btn-link">Línea minorista</button>
+                    <button class="btn-link">Línea escolar</button>
+                    <button class="btn-link">Línea escolar</button>
+                </div>
+                <div>
+                    <button class="btn-link titSection">Voleibol</button>
+                    <button class="btn-link">Línea de playa</button>
+                    <button class="btn-link">Línea minorista</button>
+                    <button class="btn-link">Línea escolar</button>
+                    <button class="btn-link">Línea simple</button>
+                    <button class="btn-link">Línea de innovación</button>
+                </div>
+                <div>
+                    <button class="btn-link titSection">Balonmano</button>
+                </div>
+            </div>
+        </div>
     </div>
 </header>
 <main>
