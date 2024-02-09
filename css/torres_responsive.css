@@ -1,0 +1,20 @@
+@media only screen and (max-width: 991px) {
+    .contNavbar ul.menu{
+        display: none!important;
+    }
+    .pantalla .contVideo .video.full{
+        display: none!important;
+    }
+    .pantalla .contVideo .video.responsive{
+        display: block!important;
+    }    
+}
+
+@media (min-width: 1200px) {
+    .pantalla .contVideo .video.full{
+        display: block!important;
+    }
+    .pantalla .contVideo .video.responsive{
+        display: none!important;
+    }
+}

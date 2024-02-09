@@ -1,0 +1,97 @@
+@import url(reset.css);
+@import url(torres_responsive.css);
+@import url(botones.css);
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.05em;
+}
+
+/*BARRA DE NAVEGACIÓN*/
+.contNavbar{
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+}
+.contNavbar .contLogotipo{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(60px, auto);
+}
+.contNavbar .contLogotipo .logotipo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contNavbar .contLogotipo .acciones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+}
+.contNavbar ul.menu{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+.contNavbar ul.menu li{
+    padding: 0 10px;
+}
+.contNavbar ul.menu li button{
+    font-weight: 600;
+    color: #fff;
+    font-size: 1em;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 3px; 
+}
+.contNavbar ul.menu li button::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;  
+}
+
+.contNavbar ul.menu li button:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+/* VIDEO PANTALLA PRINCIPAL*/
+.pantalla{
+    overflow: hidden;
+    position: relative;
+    height: 90vh;
+    height: 90svh;
+}
+.pantalla .contVideo{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    scale: 1.2;
+}
+.pantalla .contVideo .video{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.pantalla .contVideo .video.full{
+    display: block;
+}
+.pantalla .contVideo .video.responsive{
+    display: none;
+}
